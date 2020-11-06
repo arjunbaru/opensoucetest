@@ -8,9 +8,10 @@
 
 import UIKit
 
-public protocol ResizableControllerPositionHandler: class {
+public protocol ResizableControllerPositionHandler: UIViewController {
     var onView: UIView { get }
     var shouldShowSlideUpIndication: Bool { get }
+    var sliderBackgroundColor: UIColor { get }
 
     var initialTopOffset: CGFloat { get }
     var finalTopOffset: CGFloat { get }
@@ -20,7 +21,6 @@ public protocol ResizableControllerPositionHandler: class {
 }
 
 public extension ResizableControllerPositionHandler where Self: UIViewController {
-
     var onView: UIView {
         return self.view
     }
@@ -30,23 +30,22 @@ public extension ResizableControllerPositionHandler where Self: UIViewController
             self.dismiss(animated: true, completion: nil)
         }
     }
-}
 
-public extension ResizableControllerPositionHandler {
+    var sliderBackgroundColor: UIColor {
+        UIColor.darkGray.withAlphaComponent(0.5)
+    }
 
     var initialTopOffset: CGFloat {
-        return UIScreen.main.bounds.height * 0.08
+        return ResizableConstants.maximumTopOffset
     }
 
     var finalTopOffset: CGFloat {
-        return initialTopOffset
+        return ResizableConstants.maximumTopOffset
     }
 
     var shouldShowSlideUpIndication: Bool {
         return initialTopOffset != finalTopOffset
     }
-
-    func willMoveTopOffset(value: CGFloat) {}
 
     func didMoveTopOffset(value: CGFloat) {}
 }
@@ -67,9 +66,9 @@ class ResizableControllerObserver: NSObject, UIGestureRecognizerDelegate, UIScro
     var presentingVCminY: CGFloat = 0
     private var gestureDidEndedState = true
 
-    private let slideIndicativeView: UIView = {
+    private lazy var slideIndicativeView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
+        view.backgroundColor = delegate?.sliderBackgroundColor
         view.widthAnchor.constraint(equalToConstant: 55).isActive = true
         view.heightAnchor.constraint(equalToConstant: 5).isActive = true
         view.layer.cornerRadius = 2
@@ -81,8 +80,7 @@ class ResizableControllerObserver: NSObject, UIGestureRecognizerDelegate, UIScro
         self.view = view
         self.animationDuration = duration
         super.init()
-        self.delegate = delegate
-
+        setupDelegate(delegate)
         commonInit()
     }
 
@@ -101,6 +99,13 @@ class ResizableControllerObserver: NSObject, UIGestureRecognizerDelegate, UIScro
         self.panGesture.addTarget(self, action: #selector(handlePan))
         self.panGesture.delegate = self
         view.addGestureRecognizer(panGesture)
+    }
+
+    fileprivate func setupDelegate(_ delegate: ResizableControllerPositionHandler?) {
+        self.delegate = delegate
+
+        self.estimatedFinalTopOffset = delegate?.finalTopOffset ?? ResizableConstants.maximumTopOffset
+        self.estimatedInitialTopOffset = delegate?.initialTopOffset ?? ResizableConstants.maximumTopOffset
     }
 
     @objc private func handlePan(_ gestureRecognizer: UIGestureRecognizer) {

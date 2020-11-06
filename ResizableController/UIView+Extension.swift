@@ -31,3 +31,42 @@ public struct ResizableConstants {
     public static let maximumTopOffset = UIScreen.main.bounds.height * 0.08
     public static let animationDuration: TimeInterval = 0.3
 }
+
+public extension UIViewController {
+    func present(_ viewControllerToPresent: ResizableControllerPositionHandler,
+                 animationDuration: TimeInterval = 0.3,
+                 completion: (() -> Void)? = nil) {
+        let viewController = ResizableContainerViewController(animationDuration: animationDuration,
+                                                           childVC: viewControllerToPresent)
+        self.present(viewController, animated: true, completion: completion)
+    }
+}
+
+class ResizableContainerViewController: UIViewController {
+    private var transitionAnimator: UIViewControllerTransitioningDelegate?
+    init(animationDuration: TimeInterval,
+         childVC: UIViewController) {
+        self.transitionAnimator = ResizableTransitioningController(animationDuration: animationDuration)
+        super.init(nibName: nil, bundle: nil)
+
+        setup()
+        addChildVC(childVC)
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    private func setup() {
+        modalPresentationStyle = .custom
+        transitioningDelegate = transitionAnimator
+    }
+    private func addChildVC(_ child: UIViewController) {
+        view.addSubview(child.view)
+        addChild(child)
+        child.didMove(toParent: self)
+    }
+}
