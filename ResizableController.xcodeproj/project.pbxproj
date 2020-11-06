@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		420FF919254155C2000FEDAD /* ResizableController.h in Headers */ = {isa = PBXBuildFile; fileRef = 420FF917254155C2000FEDAD /* ResizableController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		420FF921254157C4000FEDAD /* ResizableControllerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF920254157C3000FEDAD /* ResizableControllerObserver.swift */; };
+		420FF924254157DB000FEDAD /* ResizableTransitioningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF923254157DB000FEDAD /* ResizableTransitioningController.swift */; };
+		420FF927254157EC000FEDAD /* ResizableAnimatedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF926254157EC000FEDAD /* ResizableAnimatedController.swift */; };
+		420FF92A25417524000FEDAD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF92925417524000FEDAD /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		420FF914254155C2000FEDAD /* ResizableController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResizableController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		420FF917254155C2000FEDAD /* ResizableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResizableController.h; sourceTree = "<group>"; };
 		420FF918254155C2000FEDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		420FF920254157C3000FEDAD /* ResizableControllerObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableControllerObserver.swift; sourceTree = "<group>"; };
+		420FF923254157DB000FEDAD /* ResizableTransitioningController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableTransitioningController.swift; sourceTree = "<group>"; };
+		420FF926254157EC000FEDAD /* ResizableAnimatedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableAnimatedController.swift; sourceTree = "<group>"; };
+		420FF92925417524000FEDAD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,10 @@
 		420FF916254155C2000FEDAD /* ResizableController */ = {
 			isa = PBXGroup;
 			children = (
+				420FF926254157EC000FEDAD /* ResizableAnimatedController.swift */,
+				420FF923254157DB000FEDAD /* ResizableTransitioningController.swift */,
+				420FF92925417524000FEDAD /* UIView+Extension.swift */,
+				420FF920254157C3000FEDAD /* ResizableControllerObserver.swift */,
 				420FF917254155C2000FEDAD /* ResizableController.h */,
 				420FF918254155C2000FEDAD /* Info.plist */,
 			);
@@ -94,6 +106,7 @@
 				TargetAttributes = {
 					420FF913254155C2000FEDAD = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -130,6 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420FF927254157EC000FEDAD /* ResizableAnimatedController.swift in Sources */,
+				420FF921254157C4000FEDAD /* ResizableControllerObserver.swift in Sources */,
+				420FF92A25417524000FEDAD /* UIView+Extension.swift in Sources */,
+				420FF924254157DB000FEDAD /* ResizableTransitioningController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -246,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +278,7 @@
 		420FF91D254155C2000FEDAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 885LR8YVNT;
@@ -274,9 +292,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paytmmoney.ResizableController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +305,7 @@
 		420FF91E254155C2000FEDAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 885LR8YVNT;
@@ -298,6 +319,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paytmmoney.ResizableController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
