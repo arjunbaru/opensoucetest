@@ -80,13 +80,9 @@ class ResizableControllerObserver: NSObject, UIGestureRecognizerDelegate, UIScro
         self.view = view
         self.animationDuration = duration
         super.init()
+        
         setupDelegate(delegate)
         commonInit()
-    }
-
-    convenience init(withSwipeDelegate delegate: ResizableControllerPositionHandler,
-                     duration: TimeInterval = 0.3) {
-        self.init(in: delegate.onView, duration: duration, delegate: delegate)
     }
 
     private func commonInit() {

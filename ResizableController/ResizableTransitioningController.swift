@@ -8,18 +8,18 @@
 
 import UIKit
 
-public class ResizableTransitioningController: NSObject, UIViewControllerTransitioningDelegate {
+class ResizableTransitioningController: NSObject, UIViewControllerTransitioningDelegate {
 
     private let animationDuration: TimeInterval
     private var gestureRecoganiser: ResizableControllerObserver!
     private var transitionincontroller: ResizableAnimatedController?
     private var shouldProceedWithTransitioning = true
 
-    public init(animationDuration: TimeInterval = ResizableConstants.animationDuration) {
+    init(animationDuration: TimeInterval = ResizableConstants.animationDuration) {
         self.animationDuration = animationDuration
     }
 
-    public func animationController(forPresented presented: UIViewController,
+    func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController)
     -> UIViewControllerAnimatedTransitioning? {
@@ -43,7 +43,7 @@ public class ResizableTransitioningController: NSObject, UIViewControllerTransit
         return transitionincontroller
     }
 
-    public func animationController(forDismissed dismissed: UIViewController)
+    func animationController(forDismissed dismissed: UIViewController)
       -> UIViewControllerAnimatedTransitioning? {
         guard shouldProceedWithTransitioning else { return nil }
         transitionincontroller?.isPresenting = false
