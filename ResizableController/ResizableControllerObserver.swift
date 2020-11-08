@@ -1,6 +1,5 @@
 //
 //  ResizableControllerObserver.swift
-//  Differentiator
 //
 //  Created by Arjun Baru on 05/05/20.
 //  Copyright © 2020 Paytm Money 🚀. All rights reserved.
@@ -80,7 +79,7 @@ class ResizableControllerObserver: NSObject, UIGestureRecognizerDelegate, UIScro
         self.view = view
         self.animationDuration = duration
         super.init()
-        
+
         setupDelegate(delegate)
         commonInit()
     }

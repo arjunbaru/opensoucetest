@@ -1,6 +1,5 @@
 //
 //  UIView+Extension.swift
-//  ResizableController
 //
 //  Created by Arjun Baru on 22/10/20.
 //  Copyright © 2020 Paytm Money 🚀. All rights reserved.

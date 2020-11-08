@@ -1,6 +1,5 @@
 //
 //  ResizableTransitioningController.swift
-//  EQCore
 //
 //  Created by Arjun Baru on 25/04/20.
 //  Copyright © 2020 Paytm Money 🚀. All rights reserved.
