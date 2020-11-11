@@ -8,8 +8,11 @@
 import UIKit
 
 public protocol ResizableControllerPositionHandler: UIViewController {
-    var onView: UIView { get }
+
+    /// Override this property if you do not want to include intuitive slide up indicator. Disabled by default for non-resizable views controllers.
     var shouldShowSlideUpIndication: Bool { get }
+
+    
     var sliderBackgroundColor: UIColor { get }
 
     var initialTopOffset: CGFloat { get }
@@ -19,10 +22,13 @@ public protocol ResizableControllerPositionHandler: UIViewController {
     func didMoveTopOffset(value: CGFloat)
 }
 
-public extension ResizableControllerPositionHandler where Self: UIViewController {
+extension ResizableControllerPositionHandler {
     var onView: UIView {
         return self.view
     }
+}
+
+public extension ResizableControllerPositionHandler {
 
     func willMoveTopOffset(value: CGFloat) {
         if initialTopOffset == finalTopOffset || value > initialTopOffset {

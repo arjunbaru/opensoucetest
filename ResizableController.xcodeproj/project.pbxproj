@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		420A98EE2559344A0037A90E /* ResizableControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A98ED2559344A0037A90E /* ResizableControllerTests.swift */; };
-		420A98F02559344A0037A90E /* ResizableController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420FF914254155C2000FEDAD /* ResizableController.framework */; };
 		420FF919254155C2000FEDAD /* ResizableController.h in Headers */ = {isa = PBXBuildFile; fileRef = 420FF917254155C2000FEDAD /* ResizableController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		420FF921254157C4000FEDAD /* ResizableControllerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF920254157C3000FEDAD /* ResizableControllerObserver.swift */; };
 		420FF924254157DB000FEDAD /* ResizableTransitioningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF923254157DB000FEDAD /* ResizableTransitioningController.swift */; };
 		420FF927254157EC000FEDAD /* ResizableAnimatedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF926254157EC000FEDAD /* ResizableAnimatedController.swift */; };
 		420FF92A25417524000FEDAD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FF92925417524000FEDAD /* UIView+Extension.swift */; };
+		42EFACA7255AC2B3000CB6BC /* ResizableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFACA6255AC2B3000CB6BC /* ResizableControllerUnitTests.swift */; };
+		42EFACA9255AC2B3000CB6BC /* ResizableController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420FF914254155C2000FEDAD /* ResizableController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		420A98F12559344A0037A90E /* PBXContainerItemProxy */ = {
+		42EFACAA255AC2B3000CB6BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 420FF90B254155C2000FEDAD /* Project object */;
 			proxyType = 1;
@@ -27,9 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		420A98EB255934490037A90E /* ResizableControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResizableControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		420A98ED2559344A0037A90E /* ResizableControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableControllerTests.swift; sourceTree = "<group>"; };
-		420A98EF2559344A0037A90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		420FF914254155C2000FEDAD /* ResizableController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResizableController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		420FF917254155C2000FEDAD /* ResizableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResizableController.h; sourceTree = "<group>"; };
 		420FF918254155C2000FEDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,17 +34,12 @@
 		420FF923254157DB000FEDAD /* ResizableTransitioningController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableTransitioningController.swift; sourceTree = "<group>"; };
 		420FF926254157EC000FEDAD /* ResizableAnimatedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableAnimatedController.swift; sourceTree = "<group>"; };
 		420FF92925417524000FEDAD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		42EFACA4255AC2B3000CB6BC /* ResizableControllerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResizableControllerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42EFACA6255AC2B3000CB6BC /* ResizableControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableControllerUnitTests.swift; sourceTree = "<group>"; };
+		42EFACA8255AC2B3000CB6BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		420A98E8255934490037A90E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				420A98F02559344A0037A90E /* ResizableController.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		420FF911254155C2000FEDAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,23 +47,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42EFACA1255AC2B3000CB6BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42EFACA9255AC2B3000CB6BC /* ResizableController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		420A98EC2559344A0037A90E /* ResizableControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				420A98ED2559344A0037A90E /* ResizableControllerTests.swift */,
-				420A98EF2559344A0037A90E /* Info.plist */,
-			);
-			path = ResizableControllerTests;
-			sourceTree = "<group>";
-		};
 		420FF90A254155C2000FEDAD = {
 			isa = PBXGroup;
 			children = (
 				420FF916254155C2000FEDAD /* ResizableController */,
-				420A98EC2559344A0037A90E /* ResizableControllerTests */,
+				42EFACA5255AC2B3000CB6BC /* ResizableControllerUnitTests */,
 				420FF915254155C2000FEDAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				420FF914254155C2000FEDAD /* ResizableController.framework */,
-				420A98EB255934490037A90E /* ResizableControllerTests.xctest */,
+				42EFACA4255AC2B3000CB6BC /* ResizableControllerUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +89,15 @@
 			path = ResizableController;
 			sourceTree = "<group>";
 		};
+		42EFACA5255AC2B3000CB6BC /* ResizableControllerUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				42EFACA6255AC2B3000CB6BC /* ResizableControllerUnitTests.swift */,
+				42EFACA8255AC2B3000CB6BC /* Info.plist */,
+			);
+			path = ResizableControllerUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -112,24 +112,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		420A98EA255934490037A90E /* ResizableControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 420A98F52559344A0037A90E /* Build configuration list for PBXNativeTarget "ResizableControllerTests" */;
-			buildPhases = (
-				420A98E7255934490037A90E /* Sources */,
-				420A98E8255934490037A90E /* Frameworks */,
-				420A98E9255934490037A90E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				420A98F22559344A0037A90E /* PBXTargetDependency */,
-			);
-			name = ResizableControllerTests;
-			productName = ResizableControllerTests;
-			productReference = 420A98EB255934490037A90E /* ResizableControllerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		420FF913254155C2000FEDAD /* ResizableController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 420FF91C254155C2000FEDAD /* Build configuration list for PBXNativeTarget "ResizableController" */;
@@ -148,6 +130,24 @@
 			productReference = 420FF914254155C2000FEDAD /* ResizableController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		42EFACA3255AC2B3000CB6BC /* ResizableControllerUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42EFACAC255AC2B3000CB6BC /* Build configuration list for PBXNativeTarget "ResizableControllerUnitTests" */;
+			buildPhases = (
+				42EFACA0255AC2B3000CB6BC /* Sources */,
+				42EFACA1255AC2B3000CB6BC /* Frameworks */,
+				42EFACA2255AC2B3000CB6BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42EFACAB255AC2B3000CB6BC /* PBXTargetDependency */,
+			);
+			name = ResizableControllerUnitTests;
+			productName = ResizableControllerUnitTests;
+			productReference = 42EFACA4255AC2B3000CB6BC /* ResizableControllerUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,12 +157,12 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					420A98EA255934490037A90E = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
 					420FF913254155C2000FEDAD = {
 						CreatedOnToolsVersion = 12.0.1;
 						LastSwiftMigration = 1200;
+					};
+					42EFACA3255AC2B3000CB6BC = {
+						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
 			};
@@ -180,20 +180,20 @@
 			projectRoot = "";
 			targets = (
 				420FF913254155C2000FEDAD /* ResizableController */,
-				420A98EA255934490037A90E /* ResizableControllerTests */,
+				42EFACA3255AC2B3000CB6BC /* ResizableControllerUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		420A98E9255934490037A90E /* Resources */ = {
+		420FF912254155C2000FEDAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		420FF912254155C2000FEDAD /* Resources */ = {
+		42EFACA2255AC2B3000CB6BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,14 +203,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		420A98E7255934490037A90E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				420A98EE2559344A0037A90E /* ResizableControllerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		420FF910254155C2000FEDAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,55 +214,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42EFACA0255AC2B3000CB6BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42EFACA7255AC2B3000CB6BC /* ResizableControllerUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		420A98F22559344A0037A90E /* PBXTargetDependency */ = {
+		42EFACAB255AC2B3000CB6BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 420FF913254155C2000FEDAD /* ResizableController */;
-			targetProxy = 420A98F12559344A0037A90E /* PBXContainerItemProxy */;
+			targetProxy = 42EFACAA255AC2B3000CB6BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		420A98F32559344A0037A90E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V83QP83683;
-				INFOPLIST_FILE = ResizableControllerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.paytmmoney.ResizableControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		420A98F42559344A0037A90E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V83QP83683;
-				INFOPLIST_FILE = ResizableControllerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.paytmmoney.ResizableControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		420FF91A254155C2000FEDAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,18 +408,47 @@
 			};
 			name = Release;
 		};
+		42EFACAD255AC2B3000CB6BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V83QP83683;
+				INFOPLIST_FILE = ResizableControllerUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paytmmoney.opensource.ResizableControllerUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42EFACAE255AC2B3000CB6BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V83QP83683;
+				INFOPLIST_FILE = ResizableControllerUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paytmmoney.opensource.ResizableControllerUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		420A98F52559344A0037A90E /* Build configuration list for PBXNativeTarget "ResizableControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				420A98F32559344A0037A90E /* Debug */,
-				420A98F42559344A0037A90E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		420FF90E254155C2000FEDAD /* Build configuration list for PBXProject "ResizableController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -472,6 +463,15 @@
 			buildConfigurations = (
 				420FF91D254155C2000FEDAD /* Debug */,
 				420FF91E254155C2000FEDAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42EFACAC255AC2B3000CB6BC /* Build configuration list for PBXNativeTarget "ResizableControllerUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42EFACAD255AC2B3000CB6BC /* Debug */,
+				42EFACAE255AC2B3000CB6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
